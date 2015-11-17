@@ -1,0 +1,7 @@
+{
+  "name": "github-trafficlight",
+  "version": "0.1",
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}
