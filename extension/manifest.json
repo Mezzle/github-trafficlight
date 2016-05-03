@@ -1,10 +1,15 @@
 {
     "manifest_version": 2,
-    "name": "Github Traffic Light",
+    "name": "Status of Github",
     "description": "This extension shows an icon for the current status of Github",
-    "version": "0.1",
+    "version": "0.0.1",
     "browser_action": {
-        "default_icon": "images/status-icon-red.png"
+        "default_icon": "images/status-icon-green.png"
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
     },
     "background": {
         "scripts": [
@@ -13,6 +18,7 @@
         ]
     },
     "permissions": [
+        "alarms",
         "https://status.github.com/"
     ]
 }
