@@ -17,4 +17,4 @@ function checkStatus() {
     });
 }
 checkStatus();
-setInterval(checkStatus, 3000);
+setInterval(checkStatus, 60000);
