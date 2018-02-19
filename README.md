@@ -7,4 +7,3 @@ A very quick Chrome Extension that shows the status of github.com as reported by
 This is not an official github project, but is made for usage with github.
 
 All artwork used with permission.
-
