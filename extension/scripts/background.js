@@ -1,6 +1,12 @@
 let currentStatus = '';
 let currentStatusText = '';
 
+const statusImages = {
+  good: 'images/status-icon-green.png',
+  minor: 'images/status-icon-orange.png',
+  major: 'images/status-icon-red.png'
+};
+
 const checkStatus = async () => {
   return fetch('https://status.github.com/api/last-message.json')
     .then(response => {
@@ -11,22 +17,7 @@ const checkStatus = async () => {
       const statusText = data.body.trim();
 
       if (status !== currentStatus) {
-        switch (status) {
-          case 'good':
-        }
-        if (status === 'good') {
-          chrome.browserAction.setIcon({
-            path: 'images/status-icon-green.png'
-          });
-        } else if (status === 'minor') {
-          chrome.browserAction.setIcon({
-            path: 'images/status-icon-orange.png'
-          });
-        } else {
-          chrome.browserAction.setIcon({
-            path: 'images/status-icon-red.png'
-          });
-        }
+        chrome.browserAction.setIcon({ path: statusImages[status] });
 
         currentStatus = status;
       }
@@ -51,8 +42,7 @@ chrome.alarms.onAlarm.addListener(alarm => {
 // Push Button!
 
 chrome.browserAction.onClicked.addListener(() => {
-  const url = 'https://status.github.com/';
-  chrome.tabs.create({ url: url });
+  chrome.tabs.create({ url: 'https://status.github.com/' });
 });
 
 // Initial Check
