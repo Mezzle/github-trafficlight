@@ -3,7 +3,7 @@
   "name": "Status of Github",
   "description":
     "This extension shows an icon for the current status of Github",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "browser_action": {
     "default_icon": "images/status-icon-black@1.png"
   },
@@ -15,5 +15,5 @@
   "background": {
     "scripts": ["scripts/background.js"]
   },
-  "permissions": ["alarms", "https://www.githubstatus.xom/", "notifications"]
+  "permissions": ["alarms", "https://www.githubstatus.com/", "notifications"]
 }

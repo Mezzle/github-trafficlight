@@ -29,7 +29,7 @@ let currentIndicator = '';
 let currentDescription = '';
 
 const fetchStatus = () =>
-  fetchStatus(STATUS_URL).then(response => response.json());
+  fetch(STATUS_URL).then(response => response.json());
 
 const handleStatus = disableNotification => ({
   status: { description, indicator }
